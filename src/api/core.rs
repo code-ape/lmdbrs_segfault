@@ -36,7 +36,7 @@ pub fn action2() {
         let db_handle = env.get_default_db(DbFlags::empty()).unwrap();
         let reader = env.get_reader().unwrap();
         let db_ref = reader.bind(&db_handle);
-        match db_ref.get::<Vec<u8>>(&"log/0") {
+        match db_ref.get::<&[u8]>(&"log/0") {
             Ok(val) => {
                 let val2 = val[0];
                 val2
