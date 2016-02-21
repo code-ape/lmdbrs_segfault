@@ -1,0 +1,19 @@
+[package]
+name = "lmdbrs_segfault"
+version = "0.1.0"
+authors = ["ferris"]
+
+[dependencies]
+lmdb-rs = "0.6.0"
+rustc-serialize = "*"
+log = "*"
+env_logger = "*"
+time = "0.1"
+
+[lib]
+name = "lmdbrs_segfault"
+path = "src/lib.rs"
+
+[[bin]]
+name = "example"
+path = "example/run_segfault.rs"
